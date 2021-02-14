@@ -10,6 +10,7 @@ function App() {
     if (submittedPassword === "test") {
       setLoggedIn(true);
     }
+    else alert("That is the wrong password. Hint: the password is 'test'")
   }
 
   return (
