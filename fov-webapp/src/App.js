@@ -17,11 +17,13 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path="/">
-        { //Check if message failed
-        (!loggedIn)
+        {(!loggedIn)
           ? <LogInPage logIn={logIn}/>
-          : <div> Logged In Success </div> 
-      }        
+          : <div>
+            <h4> Logged In Success </h4>
+            <h1>This is the main Dashboard after log in</h1>
+          </div> 
+        }        
         </Route>
         <Route exact path="/test">
           <h1>Router Works</h1>
