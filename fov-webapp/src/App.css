@@ -4,5 +4,7 @@
   font-family: 'Quicksand', sans-serif;
 }
 
-
+.notHeader{
+  display: flex;
+}
 

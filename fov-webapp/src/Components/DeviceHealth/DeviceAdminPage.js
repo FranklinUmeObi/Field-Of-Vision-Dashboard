@@ -1,9 +1,10 @@
 import React from 'react'
+import "./DeviceAdminPage.css";
 
 function DeviceAdminPage() {
     return (
-        <div>
-            <h1>hello</h1>
+        <div className="deviceAdmin">
+            <h1>Device</h1>
         </div>
     )
 }

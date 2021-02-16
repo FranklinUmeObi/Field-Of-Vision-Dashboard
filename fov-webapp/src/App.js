@@ -4,13 +4,16 @@ import { React, useState } from "react";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 import LogInPage from "./Components/LogIn/LogInPage.js";
+import DrawerNav from "./Components/DrawerNav.js";
 import Header from "./Components/Header.js";
 import AnnexButton from "./Components/LogIn/AnnexButton.js";
+
 import DevicePage from "./Components/DeviceHealth/DeviceAdminPage.js";
+import StatsPage from "./Components/Statistics/StatsPage.js";
 
 function App() {
-  let [loggedIn, setLoggedIn] = useState(false);
-
+  let [loggedIn, setLoggedIn] = useState(true);
+  //Change Back To false
   function logIn(submittedPassword) {
     if (submittedPassword === "test") {
       setLoggedIn(true);
@@ -34,7 +37,10 @@ function App() {
             ? 
             (<div>
               <Header /> 
-              <DevicePage /> 
+              <div className="notHeader">
+                <DrawerNav/>
+                <DevicePage /> 
+              </div>
             </div>)
             : (<Link to="/"><AnnexButton text="Login"/></Link>)
         }
@@ -47,7 +53,10 @@ function App() {
             ? 
             (<div>
               <Header /> 
-              <h1>Stats Paage</h1> 
+              <div className="notHeader">
+                <DrawerNav/>
+                <StatsPage /> 
+              </div>
             </div>)
             : (<Link to="/"><AnnexButton text="Login"/></Link>)
         }
