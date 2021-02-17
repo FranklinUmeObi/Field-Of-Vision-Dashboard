@@ -1,4 +1,13 @@
 .statsAdmin{
     width: 100%;
     background: cadetblue;
+    margin-left: 290px;
 }
+
+@media only screen and (max-width: 8500px) {
+    .statsAdmin{
+
+        margin-left: 0px;
+    }
+  }
+  

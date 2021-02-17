@@ -12,8 +12,7 @@ import DevicePage from "./Components/DeviceHealth/DeviceAdminPage.js";
 import StatsPage from "./Components/Statistics/StatsPage.js";
 
 function App() {
-  let [loggedIn, setLoggedIn] = useState(true);
-  //Change Back To false
+  let [loggedIn, setLoggedIn] = useState(false);
   function logIn(submittedPassword) {
     if (submittedPassword === "test") {
       setLoggedIn(true);

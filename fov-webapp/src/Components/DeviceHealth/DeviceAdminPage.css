@@ -1,4 +1,14 @@
 .deviceAdmin{
     width: 100%;
     background: green;
+    margin-left: 290px;
 }
+
+
+@media only screen and (max-width: 850px) {
+    .deviceAdmin{
+
+        margin-left: 0px;
+    }
+  }
+  

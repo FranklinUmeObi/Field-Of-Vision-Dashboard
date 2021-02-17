@@ -8,3 +8,6 @@
   display: flex;
 }
 
+.heightSpacer{
+  height: 100vh;
+}
