@@ -1,0 +1,72 @@
+
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #82E1AF; /*blue = #1F9DFF*/
+  position: relative;
+  border-radius: 25px;
+}
+
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;/*changes size of all text in the bar*/
+  display: block;
+}
+
+/* Bell notification 
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a.icon:hover {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}*/
+
+/* Style the active link (or home/logo) */
+.left {
+  float: left;
+  height: 5%;
+  width: 25%;
+  background-color: #82E1AF;
+  color: white;
+  border-radius: 25px;
+}
+
+.right {
+  float: right;
+  height: 5%;
+  width: 25%;
+  background-color: #82E1AF;
+  color: white;
+  text-align:right;
+  border-radius: 25px;
+  
+}
+
+.middle {
+  margin-left: 36.5%;
+  height: 5%;
+  width: 25%;
+  background-color: #82E1AF;
+  color: white;
+  text-align:center;
+ font-family: 'Quicksand', sans-serif;
+border-radius: 25px;
+}
+
+ 
+
+
