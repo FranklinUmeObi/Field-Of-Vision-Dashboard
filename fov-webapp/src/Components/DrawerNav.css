@@ -2,7 +2,7 @@
   width: 290px;
   height: 90vh;
   top: 10vh;
-  background: goldenrod;
+  background: white;
   position: fixed;
 }
 .navMobile {
@@ -10,7 +10,7 @@
   top: 10vh;
   width: 290px;
   height: 90vh;
-  background: goldenrod;
+  background: white;
   -webkit-box-shadow: 9px 7px 15px 0px rgba(0, 0, 0, 0.42);
   box-shadow: 9px 7px 15px 0px rgba(0, 0, 0, 0.42);
 }
@@ -36,17 +36,52 @@
     visibility: visible;
     display: block;
 
-    margin-left: 240px;
+    margin-left: 200px;
     margin-top: 5px;
   }
 }
 
-
-
 @media only screen and (min-width: 850px) {
-
   .navMobile {
     box-shadow: none;
   }
 }
 
+.sidebar{
+  padding-left: 30px;
+  font-size: 18px;
+  font-weight: 500;
+
+}
+
+.sidebar a {
+  text-decoration: none;
+}
+
+.sidebar .sub-title {
+  color: #6d97f0;
+  padding-top: 1.5em;
+  font-weight: bold;
+}
+
+.sidebar .sub-titleFirst{
+margin-top: -50px;
+}
+
+.sidebar .option {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: left;
+  margin-top: 12px;
+}
+
+.sidebar .nav_text {
+  padding-left: 0.5em;
+
+  color: black;
+}
+
+.sidebar .nav_text:hover {
+  color: #01d1ff;
+}

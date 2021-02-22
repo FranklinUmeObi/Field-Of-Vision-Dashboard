@@ -19,10 +19,11 @@ function DeviceAdminPage() {
   });
 
   return (
-    <div className="deviceAdmin">
+    <div  className="deviceAdmin">
+      <br id="Critical"/>
       <div className="deviceContainer">
         <div className="dc_header">
-          <h2 className="dc_headerText">Critical Devices</h2>
+          <h2  className="dc_headerText">Critical Devices</h2>
         </div>
 
         <div className="device">
@@ -55,10 +56,11 @@ function DeviceAdminPage() {
           />
         </div>
       </div>
+      <br id="All"/>
 
-      <div className="deviceContainer">
+      <div  className="deviceContainer">
         <div className="dc_header">
-          <h2 className="dc_headerText">All Devices</h2>
+          <h2  className="dc_headerText">All Devices</h2>
         </div>
 
         <div className="device">
@@ -131,8 +133,64 @@ function DeviceAdminPage() {
             on="Y"
             seat="B23"
           />
+          <DeviceItem
+            number="3040"
+            status="Normal"
+            battery="86%"
+            on="Y"
+            seat="B23"
+          />
+          <DeviceItem
+            number="3041"
+            status="Normal"
+            battery="96%"
+            on="Y"
+            seat="B24"
+          />
+          <DeviceItem
+            number="30"
+            status="Normal"
+            battery="76%"
+            on="Y"
+            seat="B24"
+          />
+          <DeviceItem
+            number="3043"
+            status="Normal"
+            battery="100%"
+            on="Y"
+            seat="T23"
+          />
+          <DeviceItem
+            number="3044"
+            status="Normal"
+            battery="56%"
+            on="Y"
+            seat="P23"
+          />
+          <DeviceItem
+            number="3045"
+            status="Normal"
+            battery="86%"
+            on="Y"
+            seat="A23"
+          />
+          <DeviceItem
+            number="3046"
+            status="Critical"
+            battery="86%"
+            on="Y"
+            seat="B23"
+          />
+          <DeviceItem
+            number="3046"
+            status="Critical"
+            battery="86%"
+            on="Y"
+            seat="B23"
+          />
 
-          <div className="dc_buttonContainer">
+          <div id="Add" className="dc_buttonContainer">
             <div className="dc_button">
               <ThemeProvider theme={theme}>
                 <IconButton
