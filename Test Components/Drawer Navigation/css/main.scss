@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+:root {
+    --primary-color: #007AF3;
+}
+
+body {
+    background: #F2F2F2;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.navbar {
+    background: white;
+    padding: 1em;
+
+    .logo {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        font-size: 1.2em;
+    }
+
+        span {
+            color: var(--primary-color);
+        }
+}
+
+.sidebar {
+    background: #d7eaf0;
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+    width: 30vh;
+    font-weight: bold;
+    font-size: 1em;
+
+    a {
+        text-decoration: none;
+    }
+
+    .sub-title{
+        color: #6d97f0;
+        padding-left: 1.5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        font-weight: bold;
+    }
+
+
+    .option {
+        align-items:center;
+        display: flex;  
+    }
+
+    .images {
+        padding-left: 1.5em
+    }
+
+    .text {
+        padding-left: 0.5em;
+        color:black;
+    }
+
+    .text:hover {
+        color: #01d1ff;
+    }
+}
+
+
