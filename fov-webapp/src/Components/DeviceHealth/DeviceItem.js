@@ -2,11 +2,16 @@ import React from "react";
 import "./DeviceAdminPage.css";
 
 function DeviceItem(props) {
+
+  let isCritical = false
+
+  if(props.status === "Critical")isCritical = true
+
   return (
     <div className="device">
       <div className="device_left">
         <div className="device_text"><p>{props.number}</p></div>
-        <div className="device_text"><p>{props.status}</p></div>
+        <div className="device_text"><p className={isCritical ? "redText" : "greenText"}>{props.status}</p></div>
       </div>
 
       <div className="device_right">
