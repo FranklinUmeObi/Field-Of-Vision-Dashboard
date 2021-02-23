@@ -6,6 +6,7 @@ function DeviceItem(props) {
   let isCritical = false
 
   if(props.status === "Critical")isCritical = true
+  if(props.battery === "ERR")isCritical = true
 
   return (
     <div className="device">
@@ -15,7 +16,7 @@ function DeviceItem(props) {
       </div>
 
       <div className="device_right">
-        <div className="device_text"><p>{props.battery}</p></div>
+        <div className="device_text"><p className={isCritical ? "redText" : "greenText"}>{props.battery}</p></div>
         <div className="device_text"><p>{props.on}</p></div>
         <div className="device_text"><p>{props.seat}</p></div>
       </div>
