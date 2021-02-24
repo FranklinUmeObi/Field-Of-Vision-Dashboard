@@ -69,7 +69,7 @@ function NavItem(props) {
     <div>
       <div className="option">
         <ThemeProvider theme={theme}>{icon}</ThemeProvider>
-        <p class="nav_text"> {props.text} </p>
+        <p className="nav_text"> {props.text} </p>
       </div>
     </div>
   );

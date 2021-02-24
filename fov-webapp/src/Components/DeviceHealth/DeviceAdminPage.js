@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import "./DeviceAdminPage.css";
 import DeviceItem from "./DeviceItem.js";
 
@@ -9,6 +9,9 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import deviceData from "../../Data/devices.json";
 
 function DeviceAdminPage() {
+  let [allDevices, setAll] = useState();
+  let [criticalDevices, setCrit] = useState();
+
   const theme = createMuiTheme({
     palette: {
       primary: {
@@ -20,26 +23,49 @@ function DeviceAdminPage() {
     },
   });
 
-  const devices = deviceData.Devices.map((device) => (
-    <DeviceItem
-    number={device.Device_number}
-    status={device.Status}
-    battery={device.Battery}
-    on={device.On}
-    seat={device.Location}
-    />
-  ));
 
+  useEffect(() => {
+    const devices = deviceData.Devices.map((device, index) => (
+      <DeviceItem
+        key={index}
+        number={device.Device_number}
+        status={device.Status}
+        battery={device.Battery}
+        on={device.On}
+        seat={device.Location}
+      />
+    ));
+    setAll(devices);
 
+    let deviceDataCritical =[];
+    for (let i = 0; i < deviceData.Devices.length; i++) 
+    {
+      if (deviceData.Devices[i].Status === "Critical")
+      {
+        deviceDataCritical.push(deviceData.Devices[i]);
+      }
+    }
 
+    const devicesCrit = deviceDataCritical.map((device, index) => (
+      <DeviceItem
+        key={index}
+        number={device.Device_number}
+        status={device.Status}
+        battery={device.Battery}
+        on={device.On}
+        seat={device.Location}
+      />
+    ));
+    setCrit(devicesCrit);
 
+  }, []);
 
   return (
-    <div  className="deviceAdmin">
-      <br id="Critical"/>
+    <div className="deviceAdmin">
+      <br id="Critical" />
       <div className="deviceContainer">
         <div className="dc_header">
-          <h2  className="dc_headerText">Critical Devices</h2>
+          <h2 className="dc_headerText">Critical Devices</h2>
         </div>
 
         <div className="device">
@@ -56,27 +82,14 @@ function DeviceAdminPage() {
         </div>
 
         <div className="dc_devices">
-          <DeviceItem
-            number="3046"
-            status="Critical"
-            battery="86%"
-            on="Y"
-            seat="B23"
-          />
-          <DeviceItem
-            number="3050"
-            status="Critical"
-            battery="ERR"
-            on="N"
-            seat="A11"
-          />
-        </div>
+          {criticalDevices}
+          </div>
       </div>
-      <br id="All"/>
+      <br id="All" />
 
-      <div  className="deviceContainer">
+      <div className="deviceContainer">
         <div className="dc_header">
-          <h2  className="dc_headerText">All Devices</h2>
+          <h2 className="dc_headerText">All Devices</h2>
         </div>
 
         <div className="device">
@@ -93,17 +106,13 @@ function DeviceAdminPage() {
         </div>
 
         <div className="dc_devices">
-          {devices}
+          {allDevices}
 
           <div id="Add" className="dc_buttonContainer">
             <div className="dc_button">
               <ThemeProvider theme={theme}>
-                <IconButton
-                  
-                  color="secondary"
-                  aria-label="Open Notifications"
-                >
-                  <AddRoundedIcon className="dc_icon"/>
+                <IconButton color="secondary" aria-label="Open Notifications">
+                  <AddRoundedIcon className="dc_icon" />
                 </IconButton>
               </ThemeProvider>
             </div>
