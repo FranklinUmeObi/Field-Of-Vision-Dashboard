@@ -6,6 +6,8 @@ import IconButton from "@material-ui/core/IconButton";
 import AddRoundedIcon from "@material-ui/icons/AddRounded";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
+import deviceData from "../../Data/devices.json";
+
 function DeviceAdminPage() {
   const theme = createMuiTheme({
     palette: {
@@ -17,6 +19,20 @@ function DeviceAdminPage() {
       },
     },
   });
+
+  const devices = deviceData.Devices.map((device) => (
+    <DeviceItem
+    number={device.Device_number}
+    status={device.Status}
+    battery={device.Battery}
+    on={device.On}
+    seat={device.Location}
+    />
+  ));
+
+
+
+
 
   return (
     <div  className="deviceAdmin">
@@ -77,118 +93,7 @@ function DeviceAdminPage() {
         </div>
 
         <div className="dc_devices">
-          <DeviceItem
-            number="3040"
-            status="Normal"
-            battery="86%"
-            on="Y"
-            seat="B23"
-          />
-          <DeviceItem
-            number="3041"
-            status="Normal"
-            battery="96%"
-            on="Y"
-            seat="B24"
-          />
-          <DeviceItem
-            number="30"
-            status="Normal"
-            battery="76%"
-            on="Y"
-            seat="B24"
-          />
-          <DeviceItem
-            number="3043"
-            status="Normal"
-            battery="100%"
-            on="Y"
-            seat="T23"
-          />
-          <DeviceItem
-            number="3044"
-            status="Normal"
-            battery="56%"
-            on="Y"
-            seat="P23"
-          />
-          <DeviceItem
-            number="3045"
-            status="Normal"
-            battery="86%"
-            on="Y"
-            seat="A23"
-          />
-          <DeviceItem
-            number="3046"
-            status="Critical"
-            battery="86%"
-            on="Y"
-            seat="B23"
-          />
-          <DeviceItem
-            number="3046"
-            status="Critical"
-            battery="86%"
-            on="Y"
-            seat="B23"
-          />
-          <DeviceItem
-            number="3040"
-            status="Normal"
-            battery="86%"
-            on="Y"
-            seat="B23"
-          />
-          <DeviceItem
-            number="3041"
-            status="Normal"
-            battery="96%"
-            on="Y"
-            seat="B24"
-          />
-          <DeviceItem
-            number="30"
-            status="Normal"
-            battery="76%"
-            on="Y"
-            seat="B24"
-          />
-          <DeviceItem
-            number="3043"
-            status="Normal"
-            battery="100%"
-            on="Y"
-            seat="T23"
-          />
-          <DeviceItem
-            number="3044"
-            status="Normal"
-            battery="56%"
-            on="Y"
-            seat="P23"
-          />
-          <DeviceItem
-            number="3045"
-            status="Normal"
-            battery="86%"
-            on="Y"
-            seat="A23"
-          />
-          <DeviceItem
-            number="3046"
-            status="Critical"
-            battery="86%"
-            on="Y"
-            seat="B23"
-          />
-          <DeviceItem
-            number="3046"
-            status="Critical"
-            battery="86%"
-            on="Y"
-            seat="B23"
-          />
+          {devices}
 
           <div id="Add" className="dc_buttonContainer">
             <div className="dc_button">
