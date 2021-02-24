@@ -1,0 +1,81 @@
+{
+  "Devices": [
+    {
+      "Device_number": "23",
+      "Status": "Normal",
+      "Battery": "86%",
+      "On": "Y",
+      "Location": "B23"
+    },
+    {
+      "Device_number": "24",
+      "Status": "Critical",
+      "Battery": "6%",
+      "On": "Y",
+      "Location": "D18"
+    },
+    {
+      "Device_number": "25",
+      "Status": "Normal",
+      "Battery": "89%",
+      "On": "Y",
+      "Location": "B33"
+    },
+    {
+      "Device_number": "26",
+      "Status": "Normal",
+      "Battery": "86%",
+      "On": "Y",
+      "Location": "B23"
+    },
+    {
+      "Device_number": "27",
+      "Status": "Normal",
+      "Battery": "46%",
+      "On": "Y",
+      "Location": "E3"
+    },
+    {
+      "Device_number": "28",
+      "Status": "Critical",
+      "Battery": "12%",
+      "On": "Y",
+      "Location": "D11"
+    },
+    {
+      "Device_number": "29",
+      "Status": "Normal",
+      "Battery": "85%",
+      "On": "Y",
+      "Location": "B34"
+    },
+    {
+      "Device_number": "30",
+      "Status": "Normal",
+      "Battery": "55%",
+      "On": "Y",
+      "Location": "D93"
+    },
+    {
+      "Device_number": "31",
+      "Status": "Normal",
+      "Battery": "100%",
+      "On": "N",
+      "Location": "A11"
+    },
+    {
+      "Device_number": "32",
+      "Status": "Normal",
+      "Battery": "99%",
+      "On": "N",
+      "Location": "A08"
+    },
+    {
+      "Device_number": "33",
+      "Status": "Critical",
+      "Battery": "ERR",
+      "On": "N",
+      "Location": "N/A"
+    }
+  ]
+}
