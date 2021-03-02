@@ -4,6 +4,7 @@
   top: 10vh;
   background: white;
   position: fixed;
+
 }
 .navMobile {
   position: fixed;
@@ -48,7 +49,7 @@
 }
 
 .sidebar{
-  padding-left: 30px;
+
   font-size: 18px;
   font-weight: 500;
 
@@ -62,6 +63,7 @@
   color: #6d97f0;
   padding-top: 1.5em;
   font-weight: bold;
+  padding-left: 30px;
 }
 
 .sidebar .sub-titleFirst{
@@ -74,6 +76,7 @@ margin-top: -50px;
   vertical-align: middle;
   justify-content: left;
   margin-top: 12px;
+  padding-left: 30px;
 }
 
 .sidebar .nav_text {
