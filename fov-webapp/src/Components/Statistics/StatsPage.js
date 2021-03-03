@@ -89,10 +89,18 @@ function StatsPage() {
 
   return (
     <div className="statsAdmin">
+
       <br id="game" />
       <div className="statsGrid">
+
+
         <br id="general" />
-        <div className="statCardLarge"></div>
+
+        <div className="statCardLarge">
+        <h3 className="statLabel">Game Replay</h3>
+        </div>
+
+
         <br id="ball" />
         <div className="statCardMedium">
           <h3 className="statLabel">Heatmap</h3>
