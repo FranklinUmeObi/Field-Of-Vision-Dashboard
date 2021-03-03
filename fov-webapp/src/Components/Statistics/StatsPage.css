@@ -22,8 +22,9 @@
 .statsGrid {
   width: 90%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 
@@ -43,13 +44,13 @@
     color: white;
     text-align: center;
     justify-content: center;
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
-.smallstatcardicon{
-    width: 100px;
+.statsIcon{
+    width: 70px !important;
+    height: 70px !important;
 }
-
 
 .Statsmalls{
     width: 30%;
@@ -73,7 +74,7 @@
     width: 90%;
     height: 40%;
     border-radius: 15px;
-    margin: 15px;
+    margin: 5px;
 
     background: #5B86E5;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #36D1DC, #5B86E5);  /* Chrome 10-25, Safari 5.1-6 */
