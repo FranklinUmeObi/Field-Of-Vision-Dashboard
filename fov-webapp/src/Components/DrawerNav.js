@@ -52,10 +52,10 @@ function DrawerNav() {
       <HashLink smooth to="/deviceDashboard#Add"><NavItem id="3"text="Add Devices" /></HashLink>
 
       <div className="sub-title">Game Statistics</div>
-      <HashLink smooth to="/statisticsDashboard"><NavItem id="4"text="Game Selection" /></HashLink>
-      <HashLink smooth to="/statisticsDashboard"><NavItem id="5"text="General Stats" /></HashLink>
-      <HashLink smooth to="/statisticsDashboard"><NavItem id="6"text="Balls Charts" /></HashLink>
-      <HashLink smooth to="/statisticsDashboard"><NavItem id="7"text="Player Charts" /></HashLink>
+      <HashLink smooth to="/statisticsDashboard#game"><NavItem id="4"text="Game Selection" /></HashLink>
+      <HashLink smooth to="/statisticsDashboard#general"><NavItem id="5"text="General Stats" /></HashLink>
+      <HashLink smooth to="/statisticsDashboard#ball"><NavItem id="6"text="Balls Charts" /></HashLink>
+      <HashLink smooth to="/statisticsDashboard#player"><NavItem id="7"text="Player Charts" /></HashLink>
 
       <div className="sub-title">General Admin</div>
       <HashLink smooth to="/"><NavItem id="8"text="Settings" /></HashLink>

@@ -67,11 +67,13 @@ function StatsPage() {
 
   return (
     <div className="statsAdmin">
+         <br id="game" />
       <div className="statsGrid">
-
+      <br id="general" />
         <div className="statCardLarge">
 
         </div>
+        <br id="ball" />
         <div className="statCardMedium">
           <h3 className="statLabel">Heatmap</h3>
           <div className="graph">
@@ -94,7 +96,7 @@ function StatsPage() {
             </div>
         </div>
 
-        
+        <br id="player" />
 
         <div className="statCard">
           <h3 className="statLabel">Possesion</h3>
