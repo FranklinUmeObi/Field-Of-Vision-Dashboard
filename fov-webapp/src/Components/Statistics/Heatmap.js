@@ -30,7 +30,7 @@ function Heatmap() {
     for (var i = 0; i < 68/divisor; i++) 
     {
       var columns = [];
-      for (var j = 0; j < 105/divisor; j++) columns[j] = 1;
+      for (var j = 0; j < 105/divisor; j++) columns[j] = 15;
       arr[i] = columns;
     }
 
