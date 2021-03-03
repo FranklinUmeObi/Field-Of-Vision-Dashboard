@@ -9,7 +9,7 @@ function Heatmap() {
     const [state, setstate] = useState([])
 
     useEffect(() => {
-        let rawHeatData = heatMap(fileData.Person.ID['8'])
+        let rawHeatData = heatMap(fileData.BallPos)
         let actualHeatData = []
         for (let tuple of rawHeatData) actualHeatData.push({name:" ", data:tuple})
         actualHeatData = actualHeatData.reverse()
