@@ -27,13 +27,29 @@
 }
 
 
-.statCardp5{
+.statCardMedium{
     background: white;
     border-radius: 15px;
     margin: 15px;
-    width: 60%;
+    width: 65%;
+    height: 320px;
 
 }
+
+
+.smallstatcardtext{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.smallstatcardicon{
+    width: 100px;
+}
+
 
 .Statsmalls{
     width: 30%;
@@ -41,6 +57,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1100px) {
+    .Statsmalls {
+        width: 250px;
+    }
+    .statCardp5{
+        width: 320px;
+    }
 }
 
 .statCardSmall{
@@ -52,7 +78,9 @@
     background: #5B86E5;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #36D1DC, #5B86E5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #36D1DC, #5B86E5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -80,4 +108,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+
+.statCardLarge{
+    background: white;
+    border-radius: 15px;
+    margin: 15px;
+    width: 100%;
+    height: 370px;
 }
