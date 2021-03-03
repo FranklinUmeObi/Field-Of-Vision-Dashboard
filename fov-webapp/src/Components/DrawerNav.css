@@ -4,6 +4,7 @@
   top: 10vh;
   background: white;
   position: fixed;
+  z-index: 60;
 
 }
 .navMobile {
@@ -29,6 +30,7 @@
   .nav > .nav_menu {
     visibility: visible;
     display: block;
+
 
     margin-left: 300px;
     margin-top: -9vh;
