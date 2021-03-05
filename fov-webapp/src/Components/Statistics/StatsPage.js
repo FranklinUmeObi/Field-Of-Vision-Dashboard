@@ -3,6 +3,7 @@ import "./StatsPage.css";
 import Chart from "react-apexcharts";
 
 import Heatmap from "./Heatmap"
+import TopDown from "./TopDown"
 
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import CallMergeIcon from '@material-ui/icons/CallMerge';
@@ -82,6 +83,7 @@ function StatsPage() {
 
         <div className="statCardLarge">
         <h3 className="statLabel">Game Replay</h3>
+        <TopDown/>
         </div>
 
 

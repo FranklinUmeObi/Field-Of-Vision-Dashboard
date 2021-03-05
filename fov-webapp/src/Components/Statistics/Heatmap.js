@@ -25,7 +25,7 @@ function Heatmap() {
 
   function heatMap(data) {
     let  arr = [];
-    let divisor = 6
+    let divisor = 4
 
     for (var i = 0; i < 68/divisor; i++) 
     {
