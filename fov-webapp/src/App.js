@@ -13,10 +13,18 @@ import StatsPage from "./Components/Statistics/StatsPage.js";
 
 function App() {
   let [loggedIn, setLoggedIn] = useState(false);
+
+
+
   function logIn(submittedPassword) {
     if (submittedPassword === "test") {
       setLoggedIn(true);
     } else alert("That is the wrong password. Hint: the password is 'test'");
+  }
+
+  function logOut() {
+    setLoggedIn(false);
+    alert("Successfully Logged Out");
   }
 
   return (
@@ -37,7 +45,7 @@ function App() {
             (<div>
               <Header /> 
               <div className="notHeader">
-                <DrawerNav/>
+                <DrawerNav logOut={logOut}/>
                 <DevicePage /> 
               </div>
             </div>)
@@ -53,7 +61,7 @@ function App() {
             (<div>
               <Header /> 
               <div className="notHeader">
-                <DrawerNav/>
+                <DrawerNav logOut={logOut}/>
                 <StatsPage /> 
               </div>
             </div>)

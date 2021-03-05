@@ -8,7 +8,7 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { HashLink } from 'react-router-hash-link';
 import NavItem from "./NavItem.js";
 
-function DrawerNav() {
+function DrawerNav(props) {
   let [toggled, setToggled] = useState(false);
 
   const theme = createMuiTheme({
@@ -60,8 +60,7 @@ function DrawerNav() {
       <div className="sub-title">General Admin</div>
       <HashLink smooth to="/"><NavItem id="8"text="Settings" /></HashLink>
       <HashLink smooth to="/"><NavItem id="9"text="Recent Logins" /></HashLink>
-      <HashLink smooth to="/"><NavItem id="10"text="Logout" /></HashLink>
-      <HashLink smooth to="/"></HashLink>
+      <HashLink onClick={props.logOut} smooth to="/"><NavItem id="10"text="Logout" /></HashLink>
 
     </div>
   );
