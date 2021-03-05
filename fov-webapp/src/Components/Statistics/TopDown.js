@@ -122,7 +122,7 @@ function TopDown() {
     p5.fill("rgba(208, 27, 150, 1)");
     for (let i = 0; i < players.length; i++) {
         if (players[i][frame]) {
-            p5.ellipse(players[i][frame].x, players[i][frame].y, 10);
+            p5.ellipse(players[i][frame].x * factor, players[i][frame].y * factor, 10);
         }
       
     }
@@ -133,7 +133,7 @@ function TopDown() {
     p5.strokeWeight(1);
     p5.fill(255);
     if (ball[frame]) {
-        p5.ellipse(ball[frame].x, ball[frame].y, 15);
+        p5.ellipse(ball[frame].x * factor, ball[frame].y * factor, 15);
     }
     p5.fill("rgba(8, 227, 150, 1)");
   };
