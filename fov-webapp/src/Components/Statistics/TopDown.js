@@ -6,6 +6,7 @@ import Sketch from "react-p5";
 
 function TopDown() {
   let frame = 0;
+  let lastFrame = 1;
   let players = fillPlayerArray(fileData);
   let ball = fillBallArray(fileData);
 
@@ -30,7 +31,9 @@ function TopDown() {
 
     for (let player of Object.values(data.Person.ID)) {
       let playerCoordinates = [];
+      if(player.length > lastFrame) lastFrame = player.length
       for (let i = 0; i < player.length; i++) {
+        
         const frame = player[i];
         let coordinate = { x: frame[1], y: frame[2] };
         playerCoordinates.push(coordinate);
@@ -55,7 +58,7 @@ function TopDown() {
 
     canvas.position();
     
-    slider = p5.createSlider(0, 500, frame);
+    slider = p5.createSlider(0, lastFrame, frame);
     slider.position(canvas.position().x,canvas.position().y + 68 * factor);
     slider.style('width', `${105 * factor}px`);
 
@@ -78,10 +81,12 @@ function TopDown() {
     drawPitch(p5);
     drawBall(p5, ball, frame);
     drawPlayers(p5, players, frame);
-    
-    if (frame < 999999999) {
+
+    if (frame < 999999) {
         frame++
     }
+
+    slider.value(frame)
     
   };
 
