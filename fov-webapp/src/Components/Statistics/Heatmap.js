@@ -24,28 +24,39 @@ function Heatmap() {
   //-------------------------------------------------------------------------------
 
   function heatMap(data) {
-    let  arr = [];
-    let divisor = 4
-
-    for (var i = 0; i < 68/divisor; i++) 
-    {
-      var columns = [];
-      for (var j = 0; j < 105/divisor; j++) columns[j] = 15;
-      arr[i] = columns;
+    let boxSize = 5
+    let ro = Math.floor(68/boxSize)
+    let col = Math.floor(105/boxSize)
+    let arr = [];
+    for (let i = 0; i < ro; i++) {
+        let columns = [];
+        for (let j = 0; j < col; j++) {
+            columns[j] = 5;
+        }
+        arr[i] = columns;
     }
 
     for (let i = 0; i < data.length; i++) 
     {
-      var tuple = data[i];
-      var x = tuple[1];
-      var y = tuple[2];
+        let tuple = data[i];
 
-      if (x > 68) x = 68;
-    
-      if (y > 105) y = 105;
+        let x = tuple[2];
+        x =  Math.floor(x/boxSize);
+        if (x > ro)
+        {
+            x = ro
+        }
 
-      arr[Math.floor(x/(68/divisor))][Math.floor(y/(105/divisor))] = arr[Math.floor(x/(68/divisor))][Math.floor(y/(105/divisor))] + 1;
+        let y = tuple[1];
+        y =  Math.floor(y/boxSize); 
+        if ( y > col)
+        {
+            y = col;
+        }
+        arr[x][y] = arr[x][y] + 1;
     }
+    arr = arr.reverse()
+    console.table(arr);   // The function returns the product of p1 and p2
     return arr;
   }
   //-------------------------------------------------------------------------------
