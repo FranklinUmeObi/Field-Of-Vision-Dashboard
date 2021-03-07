@@ -20,7 +20,7 @@ function TopDown() {
 
     for (let i = 0; i < ball.length; i++) {
       const frame = ball[i];
-      let coordinate = { x: frame[1], y: frame[2] };
+      let coordinate = { x: frame[1], y: 68- frame[2] };
       arrayOfBallCo.push(coordinate);
     }
     return arrayOfBallCo;
@@ -35,7 +35,7 @@ function TopDown() {
       for (let i = 0; i < player.length; i++) {
         
         const frame = player[i];
-        let coordinate = { x: frame[1], y: frame[2] };
+        let coordinate = { x: frame[1], y: 68- frame[2] };
         playerCoordinates.push(coordinate);
       }
       arrayOfPlayers.push(playerCoordinates);
