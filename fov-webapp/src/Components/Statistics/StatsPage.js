@@ -4,6 +4,7 @@ import Chart from "react-apexcharts";
 
 import Heatmap from "./Heatmap"
 import TopDown from "./TopDown"
+import fileData from "../../Data/stats.json";
 
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import CallMergeIcon from '@material-ui/icons/CallMerge';
@@ -95,7 +96,7 @@ function StatsPage() {
         <div className="Statsmalls">
           <div className="statCardSmall">
             <div className="smallstatcardtext">
-              <h2 className="statcardTextmain">183</h2>
+              <h2 className="statcardTextmain">{passCounter(fileData.BallPos)}</h2>
               <h4 className="statcardTextsub">TOTAL PASSES</h4>
             </div>
             <div className="smallstatcardicon">
@@ -104,7 +105,7 @@ function StatsPage() {
           </div>
           <div className="statCardSmall">
             <div className="smallstatcardtext">
-              <h2 className="statcardTextmain">7</h2>
+              <h2 className="statcardTextmain">{shotCounter(fileData.BallPos)}</h2>
               <h4 className="statcardTextsub">TOTAL SHOTS</h4>
             </div>
             <div className="smallstatcardicon">
@@ -142,5 +143,56 @@ function StatsPage() {
     </div>
   );
 }
+
+
+
+function passCounter(ballPositions) {
+  var numberOfPasses = 0;
+
+  var passDistance = 30;
+  var fps = 25;
+  for(var second = 0; second < ballPositions.length/fps - 1; second++)
+  {
+      if(distanceBetweenTwoPoints(ballPositions[second * fps], ballPositions[(second + 1) * fps]) > passDistance)
+      {
+         numberOfPasses++;
+      }
+  }
+
+  return numberOfPasses;
+}
+
+function distanceBetweenTwoPoints(coordinate1, coordinate2) {
+  return Math.sqrt(Math.pow(coordinate2[0] - coordinate1[0], 2) 
+                      + Math.pow(coordinate2[1] - coordinate1[1], 2));
+}
+
+
+function shotCounter(ballPositions) {
+  var numberOfShots = 0;
+
+  var fps = 25;
+  for(var second = 0; second < ballPositions.length/fps; second++)
+  {
+      //Check if in left or right 6-yrd box
+      if((ballPositions[second * fps][1] >= 0) 
+          && (ballPositions[second * fps][1] <= 6)
+          && (ballPositions[second * fps][2] >= 25) 
+          && (ballPositions[second * fps][2] <= 43))
+      {
+          numberOfShots++;
+      }
+      else if((ballPositions[second * fps][1] >= 99) 
+              && (ballPositions[second * fps][1] <= 105)
+              && (ballPositions[second * fps][2] >= 25) 
+              && (ballPositions[second * fps][2] <= 43))
+      {
+         numberOfShots++;
+      }
+  }
+
+  return numberOfShots;
+}
+
 
 export default StatsPage;
