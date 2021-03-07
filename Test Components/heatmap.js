@@ -7,10 +7,12 @@ let data = JSON.parse(rawdata);
 
 function heatMap(data)
 {
+    var ro = Math.floor(68/4)
+    var col = Math.floor(105/4)
     var arr = [];
-    for (var i = 0; i < 68; ++i) {
+    for (var i = 0; i < ro; ++i) {
         var columns = [];
-        for (var j = 0; j < 105; ++j) {
+        for (var j = 0; j < col; ++j) {
             columns[j] = 0;
         }
         arr[i] = columns;
@@ -20,16 +22,18 @@ function heatMap(data)
     {
         var tuple = data[i];
 
-        var x = tuple[1]; 
-        if (x > 68)
+        var x = tuple[1];
+        x =  Math.floor(x/4);
+        if (x > ro)
         {
-            x = 68
+            x = ro
         }
 
-        var y = tuple[2]; 
-        if ( y > 105)
+        var y = tuple[2];
+        y =  Math.floor(y/4); 
+        if ( y > col)
         {
-            y = 105;
+            y = col;
         }
         arr[x][y] = arr[x][y] + 1;
     }
