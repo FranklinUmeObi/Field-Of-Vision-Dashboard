@@ -12,6 +12,7 @@ for(int i = 1; i < 23; i++){
 	distanceTravelled(data[i]);
 }
 
+	//this nested function handles single player and ballpos positions
 function distanceTravelled(positions){
 	var distanceTravelled = 0;
 	var frames = 25;
