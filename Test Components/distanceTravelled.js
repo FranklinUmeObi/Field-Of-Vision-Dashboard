@@ -5,6 +5,13 @@ const fs = require("fs");
 let rawdata = fs.readFileSync("dict.json");
 let data = JSON.parse(rawdata);
 
+function distance(data){
+
+//total distanceTravelled by all players assuming players labelled 1-22 inclusive
+for(int i = 1; i < 23; i++){
+	distanceTravelled(data[i]);
+}
+
 function distanceTravelled(positions){
 	var distanceTravelled = 0;
 	var frames = 25;
@@ -16,6 +23,7 @@ function distanceTravelled(positions){
     	distanceTravelled = distanceTravelled + distanceBetweenPositions(positions[currentFrame * frames], positions[currentFrame+1 * frames]);
     }
 }
+}
 
 
 
@@ -25,13 +33,11 @@ function distanceBetweenTwoPoints(coordinate1, coordinate2) {
                       + Math.pow(coordinate2[1] - coordinate1[1], 2));
 }
 
+//total distanceTravelled by all players
+distanceTravelled(data.Person);
+
 //ball
-distanceTravelled(data.BallPos);
+distance.distanceTravelled(data.BallPos);
 
 //specific player
-distanceTravelled(data.Person[9]);
-
-//all players, assuming players labelled 1-22 inclusive
-for(int i = 1; i < 23; i++){
-	distanceTravelled(data.Person[i]);
-}
+distance.distanceTravelled(data.Person[9]);
