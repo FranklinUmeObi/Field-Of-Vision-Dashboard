@@ -12,7 +12,7 @@ import DevicePage from "./Components/DeviceHealth/DeviceAdminPage.js";
 import StatsPage from "./Components/Statistics/StatsPage.js";
 
 function App() {
-  let [loggedIn, setLoggedIn] = useState(true);
+  let [loggedIn, setLoggedIn] = useState(false);
 
 
 

@@ -111,7 +111,7 @@ function DeviceAdminPage() {
           <div id="Add" className="dc_buttonContainer">
             <div className="dc_button">
               <ThemeProvider theme={theme}>
-                <IconButton color="secondary" aria-label="Open Notifications">
+                <IconButton color="secondary" aria-label="Add Device">
                   <AddRoundedIcon className="dc_icon" />
                 </IconButton>
               </ThemeProvider>
