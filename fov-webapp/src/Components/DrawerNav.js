@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import "./DrawerNav.css";
+import app from "../Firebase"
 
 import IconButton from "@material-ui/core/IconButton";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
@@ -25,6 +26,7 @@ function DrawerNav(props) {
   function toggleDrawer() {
     setToggled(!toggled);
   }
+
 
   return (
     <div className={toggled ? "navMobile sidebar" : "nav sidebar"}>
@@ -60,7 +62,7 @@ function DrawerNav(props) {
       <div className="sub-title">General Admin</div>
       <HashLink smooth to="/"><NavItem id="8"text="Settings" /></HashLink>
       <HashLink smooth to="/"><NavItem id="9"text="Recent Logins" /></HashLink>
-      <HashLink onClick={props.logOut} smooth to="/"><NavItem id="10"text="Logout" /></HashLink>
+      <HashLink onClick={() => app.auth().signOut()} smooth to="/"><NavItem id="10"text="Logout" /></HashLink>
 
     </div>
   );
