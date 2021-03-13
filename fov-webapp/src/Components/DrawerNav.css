@@ -64,13 +64,13 @@
 
 .sidebar .sub-title {
   color: #6d97f0;
-  padding-top: 1.5em;
+  padding-top: 0.5em;
   font-weight: bold;
   padding-left: 30px;
 }
 
 .sidebar .sub-titleFirst{
-margin-top: -50px;
+margin-top: -30px;
 }
 
 .sidebar .option {
