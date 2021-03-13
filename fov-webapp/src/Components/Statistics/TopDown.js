@@ -61,7 +61,7 @@ function TopDown() {
     slider = p5.createSlider(0, lastFrame, frame);
     slider.position(canvas.position().x,canvas.position().y + 68 * factor);
     slider.style('width', `${105 * factor}px`);
-
+    p5.resizeCanvas(105 * factor, 68 * factor);
   };
 
   const windowResized = (p5) => {
@@ -74,6 +74,7 @@ function TopDown() {
   };
 
   const draw = (p5) => {
+    p5.resizeCanvas(105 * factor, 68 * factor);
     p5.background(p5.color(8, 227, 150));
 
     frame = slider.value();

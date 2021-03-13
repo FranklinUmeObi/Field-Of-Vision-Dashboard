@@ -4,7 +4,7 @@
   top: 10vh;
   background: white;
   position: fixed;
-  z-index: 60;
+  z-index: 51;
 
 }
 .navMobile {
@@ -15,6 +15,7 @@
   background: white;
   -webkit-box-shadow: 9px 7px 15px 0px rgba(0, 0, 0, 0.42);
   box-shadow: 9px 7px 15px 0px rgba(0, 0, 0, 0.42);
+  z-index: 51;
 }
 .nav_menu {
   visibility: hidden;
