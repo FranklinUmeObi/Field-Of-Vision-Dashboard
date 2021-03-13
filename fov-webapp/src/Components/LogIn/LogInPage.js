@@ -9,6 +9,7 @@ import Link from "@material-ui/core/Link";
 import Paper from "@material-ui/core/Paper";
 //import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
+import { HashLink } from 'react-router-hash-link';
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
@@ -120,9 +121,7 @@ export default function LogInPage(props) {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
+              <HashLink smooth variant="body2" to="/signup">{"Don't have an account? Sign Up"}</HashLink>
               </Grid>
             </Grid>
           </form>

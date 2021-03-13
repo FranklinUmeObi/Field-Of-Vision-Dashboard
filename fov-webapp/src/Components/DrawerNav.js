@@ -1,12 +1,12 @@
 import { React, useState } from "react";
 import "./DrawerNav.css";
 import app from "../Firebase"
-
+import { HashLink } from 'react-router-hash-link';
 import IconButton from "@material-ui/core/IconButton";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import CloseRoundedIcon from "@material-ui/icons/CloseRounded";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import { HashLink } from 'react-router-hash-link';
+
 import NavItem from "./NavItem.js";
 
 function DrawerNav(props) {
