@@ -7,14 +7,13 @@ import LogInPage from "./Components/LogIn/LogInPage.js";
 import DrawerNav from "./Components/DrawerNav.js";
 import Header from "./Components/Header.js";
 import AnnexButton from "./Components/LogIn/AnnexButton.js";
+import {DarkToggle} from "./Components/Toggle.js";
 
 import DevicePage from "./Components/DeviceHealth/DeviceAdminPage.js";
 import StatsPage from "./Components/Statistics/StatsPage.js";
 
 function App() {
   let [loggedIn, setLoggedIn] = useState(false);
-
-
 
   function logIn(submittedPassword) {
     if (submittedPassword === "test") {
@@ -37,13 +36,13 @@ function App() {
             : (<Link to="/deviceDashboard"><AnnexButton text="Go To Dashboard"/></Link>)
           }
         </Route>
-
+        <Header /> 
         <Route exact path="/deviceDashboard">
         {
             loggedIn 
             ? 
-            (<div>
-              <Header /> 
+            (
+            <div>
               <div className="notHeader">
                 <DrawerNav logOut={logOut}/>
                 <DevicePage /> 
@@ -59,7 +58,6 @@ function App() {
             loggedIn 
             ? 
             (<div>
-              <Header /> 
               <div className="notHeader">
                 <DrawerNav logOut={logOut}/>
                 <StatsPage /> 
