@@ -2,7 +2,7 @@
   width: 290px;
   height: 90vh;
   top: 10vh;
-  background: white;
+  background: var(--primaryBackgroundColor);
   position: fixed;
   z-index: 60;
 
@@ -12,7 +12,7 @@
   top: 10vh;
   width: 290px;
   height: 90vh;
-  background: white;
+  background: var(--primaryBackgroundColor);
   -webkit-box-shadow: 9px 7px 15px 0px rgba(0, 0, 0, 0.42);
   box-shadow: 9px 7px 15px 0px rgba(0, 0, 0, 0.42);
 }
@@ -84,7 +84,7 @@ margin-top: -50px;
 .sidebar .nav_text {
   padding-left: 0.5em;
 
-  color: black;
+  color: var(--primaryTextColor);
 }
 
 .sidebar .nav_text:hover {

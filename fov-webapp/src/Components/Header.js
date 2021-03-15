@@ -1,10 +1,11 @@
 import React from "react";
-
+import {DarkToggle} from "./Toggle.js";
 import "./Header.css";
 import logo from "../Assets/logowhite.png";
 
 import IconButton from "@material-ui/core/IconButton";
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
+import Brightness4OutlinedIcon from '@material-ui/icons/Brightness4Outlined';
 import NotificationsNoneRoundedIcon from '@material-ui/icons/NotificationsNoneRounded';
 //import Avatar from "@material-ui/core/Avatar";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
@@ -31,6 +32,10 @@ function Header() {
       </div>
 
       <div className="header_right">
+        
+        <DarkToggle/>
+        <div className="header_spacer"></div>
+
         <ThemeProvider theme={theme}>
           <IconButton className="header_icon" color="secondary" aria-label="Open Notifications"  >
             <NotificationsNoneRoundedIcon />
