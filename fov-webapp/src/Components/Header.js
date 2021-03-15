@@ -38,7 +38,7 @@ function Header() {
 
         <ThemeProvider theme={theme}>
           <IconButton className="header_icon" color="secondary" aria-label="Open Notifications"  >
-            <NotificationsNoneRoundedIcon />
+            <NotificationsNoneRoundedIcon/>
           </IconButton>
         </ThemeProvider>
         <div className="header_spacer"></div>
