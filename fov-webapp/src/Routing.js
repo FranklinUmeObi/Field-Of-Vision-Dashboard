@@ -5,6 +5,7 @@ import LogInPage from "./Components/LogIn/LogInPage.js";
 import SignUpPage from "./Components/LogIn/SignUpPage.js";
 import DrawerNav from "./Components/DrawerNav.js";
 import Header from "./Components/Header.js";
+import AnnexButton from "./Components/LogIn/AnnexButton.js";
 import DevicePage from "./Components/DeviceHealth/DeviceAdminPage.js";
 import StatsPage from "./Components/Statistics/StatsPage.js";
 import {AuthContext} from "./Auth"
