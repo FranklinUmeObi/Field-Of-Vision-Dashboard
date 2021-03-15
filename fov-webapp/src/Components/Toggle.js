@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import Toggle from "react-toggle";
 import { Checkbox } from '@material-ui/core';
-import Switch from "react-switch";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 
     const DARK_CLASS = "dark";
@@ -29,10 +28,10 @@ import Switch from "react-switch";
      }, [isDark]);
 
       return (
-        <Checkbox
-        color = 'secondary'
+        <DarkModeToggle
+        onChange={setIsDark}
         checked={isDark}
-        onChange={event => setIsDark(event.target.checked)}
+        size={80}
         />
       );
     };

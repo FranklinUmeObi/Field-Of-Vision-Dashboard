@@ -21,37 +21,37 @@ function NavItem(props) {
 
   switch (props.id) {
     case "1":
-      icon = <ErrorOutlineRoundedIcon className = "nav_icon" color="primary"/>;
+      icon = <ErrorOutlineRoundedIcon className = "nav_icon"/>;
       break;
     case "2":
-      icon = <ImportantDevicesRoundedIcon className = "nav_icon" color="primary"/>;
+      icon = <ImportantDevicesRoundedIcon className = "nav_icon"/>;
       break;
     case "3":
-      icon = <AddRoundedIcon className = "nav_icon" color="primary"/>;
+      icon = <AddRoundedIcon className = "nav_icon"/>;
       break;
     case "4":
-      icon = <SportsSoccerRoundedIcon className = "nav_icon" color="primary"/>;
+      icon = <SportsSoccerRoundedIcon className = "nav_icon"/>;
       break;
     case "5":
-      icon = <DonutLargeRoundedIcon className = "nav_icon" color="primary"/>;
+      icon = <DonutLargeRoundedIcon className = "nav_icon"/>;
       break;
     case "6":
-      icon = <DonutSmallRoundedIcon className = "nav_icon" color="primary"/>;
+      icon = <DonutSmallRoundedIcon className = "nav_icon"/>;
       break;
     case "7":
-      icon = <EqualizerRoundedIcon className = "nav_icon" color="primary"/>;
+      icon = <EqualizerRoundedIcon className = "nav_icon"/>;
       break;
     case "8":
-      icon = <SettingsRoundedIcon className = "nav_icon" color="primary"/>;
+      icon = <SettingsRoundedIcon className = "nav_icon"/>;
       break;
     case "9":
-      icon = <ListAltRoundedIcon className = "nav_icon" color="primary"/>;
+      icon = <ListAltRoundedIcon className = "nav_icon"/>;
       break;
     case "10":
-      icon = <PowerSettingsNewRoundedIcon className = "nav_icon" color="primary"/>;
+      icon = <PowerSettingsNewRoundedIcon className = "nav_icon"/>;
       break;
     default:
-      icon = <ArrowRightRoundedIcon className = "nav_icon" color="primary"/>;
+      icon = <ArrowRightRoundedIcon className = "nav_icon"/>;
   }
 
   const theme = createMuiTheme({
