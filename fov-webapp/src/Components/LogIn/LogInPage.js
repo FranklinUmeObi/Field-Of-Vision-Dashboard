@@ -3,9 +3,9 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import Link from "@material-ui/core/Link";
+// import FormControlLabel from "@material-ui/core/FormControlLabel";
+// import Checkbox from "@material-ui/core/Checkbox";
+// import Link from "@material-ui/core/Link";
 import Paper from "@material-ui/core/Paper";
 //import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
@@ -62,9 +62,9 @@ export default function LogInPage(props) {
       } catch (error) {
         alert(error)
       }
-    }
-    
+    },[]
   )
+
 
 
   return (
@@ -101,10 +101,10 @@ export default function LogInPage(props) {
               type="password"
               id="password"
             />
-            <FormControlLabel
+            {/* <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
-            />
+            /> */}
             <Button
               type="submit"
               fullWidth
@@ -116,9 +116,9 @@ export default function LogInPage(props) {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                {/* <Link href="#" variant="body2">
                   Forgot password?
-                </Link>
+                </Link> */}
               </Grid>
               <Grid item>
               <HashLink smooth variant="body2" to="/signup">{"Don't have an account? Sign Up"}</HashLink>
