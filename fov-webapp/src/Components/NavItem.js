@@ -1,7 +1,7 @@
 import React from "react";
+import "./NavItem.css";
 
 import ArrowRightRoundedIcon from "@material-ui/icons/ArrowRightRounded";
-import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 
 import ErrorOutlineRoundedIcon from "@material-ui/icons/ErrorOutlineRounded";
 import ImportantDevicesRoundedIcon from "@material-ui/icons/ImportantDevicesRounded";
@@ -21,37 +21,37 @@ function NavItem(props) {
 
   switch (props.id) {
     case "1":
-      icon = <ErrorOutlineRoundedIcon color="primary"/>;
+      icon = <ErrorOutlineRoundedIcon className = "nav_icon"/>;
       break;
     case "2":
-      icon = <ImportantDevicesRoundedIcon color="primary"/>;
+      icon = <ImportantDevicesRoundedIcon className = "nav_icon"/>;
       break;
     case "3":
-      icon = <AddRoundedIcon color="primary"/>;
+      icon = <AddRoundedIcon className = "nav_icon"/>;
       break;
     case "4":
-      icon = <SportsSoccerRoundedIcon color="primary"/>;
+      icon = <SportsSoccerRoundedIcon className = "nav_icon"/>;
       break;
     case "5":
-      icon = <DonutLargeRoundedIcon color="primary"/>;
+      icon = <DonutLargeRoundedIcon className = "nav_icon"/>;
       break;
     case "6":
-      icon = <DonutSmallRoundedIcon color="primary"/>;
+      icon = <DonutSmallRoundedIcon className = "nav_icon"/>;
       break;
     case "7":
-      icon = <EqualizerRoundedIcon color="primary"/>;
+      icon = <EqualizerRoundedIcon className = "nav_icon"/>;
       break;
     case "8":
-      icon = <SettingsRoundedIcon color="primary"/>;
+      icon = <SettingsRoundedIcon className = "nav_icon"/>;
       break;
     case "9":
-      icon = <ListAltRoundedIcon color="primary"/>;
+      icon = <ListAltRoundedIcon className = "nav_icon"/>;
       break;
     case "10":
-      icon = <PowerSettingsNewRoundedIcon color="primary"/>;
+      icon = <PowerSettingsNewRoundedIcon className = "nav_icon"/>;
       break;
     default:
-      icon = <ArrowRightRoundedIcon color="primary"/>;
+      icon = <ArrowRightRoundedIcon className = "nav_icon"/>;
   }
 
   const theme = createMuiTheme({

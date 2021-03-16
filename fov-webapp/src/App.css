@@ -11,3 +11,17 @@
 .heightSpacer{
   height: 100vh;
 }
+
+html {
+  --primaryBackgroundColor: white;
+  --secondaryBackgroundColor: #ececed;
+  --primaryTextColor: black;
+  --iconColor: black;
+}
+
+html.dark {
+  --primaryBackgroundColor: black;
+  --secondaryBackgroundColor: #383838;
+  --primaryTextColor: white;
+  --iconColor: white;
+}

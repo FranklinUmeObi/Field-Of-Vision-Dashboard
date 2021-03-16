@@ -1,6 +1,6 @@
 .deviceAdmin {
   width: 100%;
-  background: #ececed;
+  background: var(--secondaryBackgroundColor);
   margin-left: 290px;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
 }
 
 .deviceContainer {
-  background: white;
+  background: var(--primaryBackgroundColor);
   width: 90%;
   border-radius: 15px;
   padding: 15px;
@@ -30,6 +30,7 @@
 .dc_headerText {
   font-size: 25px;
   padding-left: 15px;
+  color: var(--primaryTextColor);
 }
 
 @media only screen and (max-width: 850px) {
@@ -49,12 +50,14 @@
 .device_left {
   display: flex;
   width: 40%;
+  color: var(--primaryTextColor);
   /* padding-left: 10px; */
   justify-content: space-between;
 }
 .device_right {
   display: flex;
   width: 40%;
+  color: var(--primaryTextColor);
   /* padding-right: 10px; */
   justify-content: space-between;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 
+import {DarkToggle} from "./Toggle.js";
 import "./Header.css";
 import logo from "../Assets/logowhite.png";
 
@@ -31,6 +32,9 @@ function Header() {
       </div>
 
       <div className="header_right">
+      <DarkToggle/>
+      <div className="header_spacer"></div>
+      
         <ThemeProvider theme={theme}>
           <IconButton className="header_icon" color="secondary" aria-label="Open Notifications"  >
             <NotificationsNoneRoundedIcon />

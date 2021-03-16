@@ -1,6 +1,6 @@
 .statsAdmin {
   width: 100%;
-  background: #ececed;
+  background: var(--secondaryBackgroundColor);
   margin-left: 290px;
   display: flex;
   justify-content: center;
@@ -28,7 +28,7 @@
 
 
 .statCardMedium{
-    background: white;
+    background: var(--primaryBackgroundColor);
     border-radius: 15px;
     margin: 15px;
     width: 65%;
@@ -40,7 +40,7 @@
 .smallstatcardtext{
     display: flex;
     flex-direction: column;
-    color: white;
+    color: var(--primaryTextColor);
     text-align: center;
     justify-content: center;
     margin-right: 30px;
@@ -87,7 +87,7 @@
 
 
 .statCard {
-  background: white;
+  background: var(--primaryBackgroundColor);
   border-radius: 15px;
   margin: 15px;
   width: 400px;
@@ -100,7 +100,7 @@
   margin-bottom: 20px;
   font-size: 30px;
   font-weight: 500;
-  color: #36363644;
+  color: var(--primaryTextColor);
 }
 
 .graph {
@@ -112,7 +112,7 @@
 }
 
 .statCardLarge{
-    background: white;
+    background: var(--primaryBackgroundColor);
     border-radius: 15px;
     margin: 15px;
     width: 100%;
