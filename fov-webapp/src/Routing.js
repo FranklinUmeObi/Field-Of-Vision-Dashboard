@@ -23,13 +23,12 @@ function Routing() {
               : (<Redirect to="/deviceDashboard"></Redirect>)
             }
           </Route>
-
+          <Header />
           <Route exact path="/deviceDashboard">
           {
               !!currentUser 
               ? 
-              (<div>
-                <Header /> 
+              (<div> 
                 <div className="notHeader">
                   <DrawerNav />
                   <DevicePage /> 
@@ -45,7 +44,6 @@ function Routing() {
               !!currentUser  
               ? 
               (<div>
-                <Header /> 
                 <div className="notHeader">
                   <DrawerNav/>
                   <StatsPage /> 
