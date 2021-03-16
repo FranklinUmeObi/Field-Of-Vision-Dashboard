@@ -20,8 +20,8 @@ html {
 }
 
 html.dark {
-  --primaryBackgroundColor: black;
-  --secondaryBackgroundColor: #383838;
+  --primaryBackgroundColor: #1e1e1e;
+  --secondaryBackgroundColor: #121212;
   --primaryTextColor: white;
   --iconColor: white;
 }
