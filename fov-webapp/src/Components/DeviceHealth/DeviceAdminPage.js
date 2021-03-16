@@ -2,6 +2,7 @@ import { React, useState, useEffect } from "react";
 import "./DeviceAdminPage.css";
 import DeviceItem from "./DeviceItem.js";
 
+import Popup from 'reactjs-popup';
 import IconButton from "@material-ui/core/IconButton";
 import AddRoundedIcon from "@material-ui/icons/AddRounded";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
@@ -37,11 +38,9 @@ function DeviceAdminPage() {
     ));
     setAll(devices);
 
-    let deviceDataCritical =[];
-    for (let i = 0; i < deviceData.Devices.length; i++) 
-    {
-      if (deviceData.Devices[i].Status === "Critical")
-      {
+    let deviceDataCritical = [];
+    for (let i = 0; i < deviceData.Devices.length; i++) {
+      if (deviceData.Devices[i].Status === "Critical") {
         deviceDataCritical.push(deviceData.Devices[i]);
       }
     }
@@ -83,7 +82,7 @@ function DeviceAdminPage() {
 
         <div className="dc_devices">
           {criticalDevices}
-          </div>
+        </div>
       </div>
       <br id="All" />
 
@@ -111,9 +110,31 @@ function DeviceAdminPage() {
           <div id="Add" className="dc_buttonContainer">
             <div className="dc_button">
               <ThemeProvider theme={theme}>
-                <IconButton color="secondary" aria-label="Add Device">
-                  <AddRoundedIcon className="dc_icon" />
-                </IconButton>
+                <Popup
+                  trigger={
+                    <IconButton color="secondary" aria-label="Add Device">
+                      <AddRoundedIcon className="dc_icon" />
+                    </IconButton>
+                  }
+                  modal
+                >
+                  {close => (
+                    <div className="modal">
+                      <form>
+                        <label>
+                          Device Number:
+                          <input type="number" />
+                        </label>
+                        <label>
+                          Seat Number:
+                          <input type="text" />
+                        </label>
+                        <input type="submit" value="Submit" />
+                      </form>
+                    </div>
+                  )}
+
+                </Popup>
               </ThemeProvider>
             </div>
           </div>
