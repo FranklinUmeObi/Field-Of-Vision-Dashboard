@@ -122,8 +122,12 @@ function DeviceAdminPage() {
                     <div className="modal">
                       <form>
                         <label>
-                          Device Number:
+                          Device ID:
                           <input type="number" />
+                        </label>
+                        <label>
+                          Power:
+                          <input type="number" min="0" max="100" />
                         </label>
                         <label>
                           Seat Number:
