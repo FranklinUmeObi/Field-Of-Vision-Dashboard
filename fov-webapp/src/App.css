@@ -20,7 +20,7 @@ html {
 }
 
 html.dark {
-  --primaryBackgroundColor: black;
+  --primaryBackgroundColor: #242526;
   --secondaryBackgroundColor: #383838;
   --primaryTextColor: white;
   --iconColor: white;
