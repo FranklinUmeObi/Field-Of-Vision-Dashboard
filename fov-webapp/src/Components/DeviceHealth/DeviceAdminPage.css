@@ -113,10 +113,12 @@
 
 .popup-content {
   margin: auto;
-  background: rgb(255, 255, 255);
+  background: var(--primaryBackgroundColor);
+  color: var(--primaryTextColor);
   width: 50%;
   padding: 10px;
   border-radius: 10px;
+  border: 2px solid white;
 }
 .popup-overlay {
   background: rgba(0, 0, 0, 0.5);
@@ -140,7 +142,8 @@ input[type="submit"], input[type="reset"] {
   background: #36d1dc;
   color: black;
   font-weight: bold;
-  border: none;
+  border: 2px solid;
+  border-color: var(--primaryBackgroundColor);
   padding: 8px 20px 8px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -149,4 +152,5 @@ input[type="submit"], input[type="reset"] {
 input[type="submit"]:hover, input[type="reset"]:hover {
   background: black;
   color: white;
+  border: 2px solid white;
 }
