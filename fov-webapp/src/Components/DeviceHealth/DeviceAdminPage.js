@@ -123,16 +123,17 @@ function DeviceAdminPage() {
                       <form>
                         <label>
                           Device ID:
-                          <input type="number" />
+                          <input type="number" required="required" placeholder="e.g. 25" />
                         </label>
                         <label>
                           Power:
-                          <input type="number" min="0" max="100" />
+                          <input type="number" min="0" max="100" placeholder="0-100%" required="required" />
                         </label>
                         <label>
                           Seat Number:
-                          <input type="text" />
+                          <input type="text" required="required" placeholder="e.g. B33" />
                         </label>
+                        <input type="reset" value="Reset" />
                         <input type="submit" value="Submit" />
                       </form>
                     </div>

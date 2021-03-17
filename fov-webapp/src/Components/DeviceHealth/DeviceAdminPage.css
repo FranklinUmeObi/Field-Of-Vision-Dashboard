@@ -115,19 +115,38 @@
   margin: auto;
   background: rgb(255, 255, 255);
   width: 50%;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 10px;
 }
-.popup-arrow {
-  color: rgb(255, 255, 255);
-}
-[role='tooltip'].popup-content {
-  width: 200px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
-}
-
 .popup-overlay {
   background: rgba(0, 0, 0, 0.5);
 }
-[data-popup='tooltip'].popup-overlay {
-  background: transparent;
+
+label {
+  display: inline-block;
+  text-align: middle;
+  font-weight: bold;
+}
+input[type="text"], input[type="number"] {
+  border: 1px solid black;
+  height: 30px;
+  width: 70%;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: middle;
+}
+input[type="submit"], input[type="reset"] {
+  background: #36d1dc;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 8px 20px 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right:4px;
+}
+input[type="submit"]:hover, input[type="reset"]:hover {
+  background: black;
+  color: white;
 }
