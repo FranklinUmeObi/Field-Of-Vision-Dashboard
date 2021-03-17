@@ -123,10 +123,11 @@
 .popup-overlay {
   background: rgba(0, 0, 0, 0.5);
 }
-
+form{
+  text-align: center;
+}
 label {
   display: inline-block;
-  text-align: middle;
   font-weight: bold;
 }
 input[type="text"], input[type="number"] {
@@ -136,7 +137,7 @@ input[type="text"], input[type="number"] {
   border-radius: 3px;
   margin-top: 5px;
   margin-bottom: 5px;
-  text-align: middle;
+  text-align: center;
 }
 input[type="submit"], input[type="reset"] {
   background: #36d1dc;
@@ -147,8 +148,8 @@ input[type="submit"], input[type="reset"] {
   padding: 8px 20px 8px 20px;
   border-radius: 5px;
   cursor: pointer;
-  margin-right:4px;
 }
+
 input[type="submit"]:hover, input[type="reset"]:hover {
   background: black;
   color: white;
