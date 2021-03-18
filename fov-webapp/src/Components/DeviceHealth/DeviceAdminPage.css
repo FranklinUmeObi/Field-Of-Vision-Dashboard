@@ -123,14 +123,14 @@
 .popup-overlay {
   background: rgba(0, 0, 0, 0.5);
 }
-form{
+#addDeviceForm{
   text-align: center;
 }
-label {
+.addDeviceLabel {
   display: inline-block;
   font-weight: bold;
 }
-input[type="text"], input[type="number"] {
+.addDeviceInput {
   border: 1px solid black;
   height: 30px;
   width: 70%;

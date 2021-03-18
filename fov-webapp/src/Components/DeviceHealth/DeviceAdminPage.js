@@ -120,18 +120,18 @@ function DeviceAdminPage() {
                 >
                   {close => (
                     <div className="modal">
-                      <form>
-                        <label>
+                      <form id="addDeviceForm">
+                        <label className="addDeviceLabel">
                           Device ID:
-                          <input type="number" required="required" placeholder="e.g. 25" />
+                          <input className="addDeviceInput" type="number" required="required" placeholder="e.g. 25" />
                         </label>
-                        <label>
+                        <label className="addDeviceLabel">
                           Power:
-                          <input type="number" min="0" max="100" placeholder="0-100%" required="required" />
+                          <input className="addDeviceInput" type="number" min="0" max="100" placeholder="0-100%" required="required" />
                         </label>
-                        <label>
+                        <label className="addDeviceLabel">
                           Seat Number:
-                          <input type="text" required="required" placeholder="e.g. B33" />
+                          <input className="addDeviceInput" type="text" required="required" placeholder="e.g. B33" />
                         </label>
                         <input type="reset" value="Reset" />
                         <input type="submit" value="Submit" />
