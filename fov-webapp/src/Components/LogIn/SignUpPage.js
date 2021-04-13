@@ -1,33 +1,32 @@
 import { React, useCallback, useState } from "react";
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import { HashLink } from 'react-router-hash-link';
-import {Redirect } from "react-router-dom";
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+import Avatar from "@material-ui/core/Avatar";
+import Button from "@material-ui/core/Button";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import TextField from "@material-ui/core/TextField";
+import { HashLink } from "react-router-hash-link";
+import { Redirect } from "react-router-dom";
+import Grid from "@material-ui/core/Grid";
+import Box from "@material-ui/core/Box";
+import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
 
 import app from "../../Firebase";
-
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
   avatar: {
     margin: theme.spacing(1),
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: "100%", // Fix IE 11 issue.
     marginTop: theme.spacing(3),
   },
   submit: {
@@ -38,29 +37,23 @@ const useStyles = makeStyles((theme) => ({
 export default function SignUp() {
   const classes = useStyles();
 
-const [submitted, setsubmitted] = useState(false)
+  const [submitted, setsubmitted] = useState(false);
 
+  const HandleSignup = useCallback(async (event) => {
+    event.preventDefault();
+    const { email, password } = event.target.elements;
+    try {
+      await app
+        .auth()
+        .createUserWithEmailAndPassword(email.value, password.value);
 
-  const HandleSignup = useCallback(
-    async event =>{
-      event.preventDefault();
-      const {email, password} = event.target.elements
-      try {
-        await app.auth()
-        .createUserWithEmailAndPassword(email.value, password.value)
+      setsubmitted(true);
+    } catch (error) {
+      alert(error);
+    }
+  }, []);
 
-        setsubmitted(true)
-      } catch (error) {
-        alert(error)
-      }
-    },[]
-  )
-
-
-
-  if(submitted) return(<Redirect to="/"></Redirect>)
-
-
+  if (submitted) return <Redirect to="/"></Redirect>;
 
   return (
     <Container component="main" maxWidth="xs">
@@ -118,7 +111,6 @@ const [submitted, setsubmitted] = useState(false)
                 autoComplete="current-password"
               />
             </Grid>
-           
           </Grid>
           <Button
             type="submit"
@@ -138,8 +130,7 @@ const [submitted, setsubmitted] = useState(false)
           </Grid>
         </form>
       </div>
-      <Box mt={5}>
-      </Box>
+      <Box mt={5}></Box>
     </Container>
   );
 }
