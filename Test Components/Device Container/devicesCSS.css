@@ -1,6 +1,5 @@
-
-*{
-	font-size: 22px;
+* {
+  font-size: 22px;
 }
 
 body {
@@ -10,6 +9,7 @@ body {
   font-weight: bold;
 }
 .allDevices {
+  /*Ryan Baird*/
   background-color: white;
   border-radius: 30px;
   position: absolute;
@@ -20,7 +20,7 @@ body {
 }
 
 @media only screen and (min-width: 850px) {
-	/* .allDevices {
+  /* .allDevices {
 		left: 0;
 		width: 100%;
 		padding: 0;
@@ -29,6 +29,7 @@ body {
 }
 
 .header {
+  /*Ryan Baird*/
   border-bottom: solid;
   border-color: #ececed;
   width: 100%;
@@ -38,24 +39,27 @@ body {
   font-size: 25px;
 }
 
-.headerText{
-	padding-left: 20px;
+.headerText {
+  /*Ryan Baird*/
+  padding-left: 20px;
 }
 
-
 .listOfDevices {
+  /*Ryan Baird*/
   overflow-y: scroll;
 
   width: 100%;
   height: 70%;
 }
 .bottom {
+  /*Ryan Baird*/
   width: 100%;
   height: 20%;
 
   text-align: center;
 }
 .button {
+  /*Ryan Baird*/
   border-radius: 50px;
   border: none;
 
